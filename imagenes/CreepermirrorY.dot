@@ -1,0 +1,87 @@
+
+        digraph G {bgcolor=none;
+    node[ style = "filled" shape=plaintext margin =0 width=0 height=0] a[ label=<
+        
+        <table border = "1" width = "300px" height = "300px" cellspacing="0">
+        <tr>
+<td id="(7, 0)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(7, 1)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(7, 2)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(7, 3)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(7, 4)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(7, 5)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(7, 6)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(7, 7)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+</tr>
+<tr>
+<td id="(6, 0)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(6, 1)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(6, 2)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(6, 3)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(6, 4)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(6, 5)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(6, 6)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(6, 7)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+</tr>
+<tr>
+<td id="(5, 0)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(5, 1)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(5, 2)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(5, 3)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(5, 4)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(5, 5)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(5, 6)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(5, 7)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+</tr>
+<tr>
+<td id="(4, 0)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(4, 1)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(4, 2)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(4, 3)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(4, 4)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(4, 5)" width = "37.5px" height="37.5px" bgcolor = "white"></td>
+<td id="(4, 6)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(4, 7)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+</tr>
+<tr>
+<td id="(3, 0)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(3, 1)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(3, 2)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(3, 3)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(3, 4)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(3, 5)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(3, 6)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(3, 7)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+</tr>
+<tr>
+<td id="(2, 0)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(2, 1)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(2, 2)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(2, 3)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(2, 4)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(2, 5)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(2, 6)" width = "37.5px" height="37.5px" bgcolor = "#000000"></td>
+<td id="(2, 7)" width = "37.5px" height="37.5px" bgcolor = "white"></td>
+</tr>
+<tr>
+<td id="(1, 0)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(1, 1)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(1, 2)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(1, 3)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(1, 4)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(1, 5)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(1, 6)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(1, 7)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+</tr>
+<tr>
+<td id="(0, 0)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(0, 1)" width = "37.5px" height="37.5px" bgcolor = "#92D050"></td>
+<td id="(0, 2)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(0, 3)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(0, 4)" width = "37.5px" height="37.5px" bgcolor = "white"></td>
+<td id="(0, 5)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(0, 6)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+<td id="(0, 7)" width = "37.5px" height="37.5px" bgcolor = "#00B050"></td>
+</tr>
+</table>
+>];}
