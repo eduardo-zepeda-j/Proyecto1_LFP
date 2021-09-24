@@ -27,7 +27,7 @@ class VentanMain(QDialog):
     
     def prueba(self,text):
         try:
-            print(self.ui.comboBox.currentText)
+            
             self.ui.visor.setStyleSheet(f"background-image:url(imagenes/{text}.png);border:2px solid black;background-attachment:scroll")
         except:
             print('salto')

@@ -42,7 +42,9 @@ class AnalizadorLexico:
                 columna = 1
                 if estado == 20 or estado == 19:
                     estado =0
-            
+            if c == ' ':
+                columna +=1
+                estado = estado
             elif c == '@':
                 columna+=1
                 buffer+=c
@@ -164,6 +166,10 @@ class AnalizadorLexico:
                     buffer=''
                     columna+=1
                     estado = 9
+                elif c=='}':
+                    buffer=''
+                    self.listaTokens.append(Token(c,'llaveB',linea,columna))
+                    estado = 19
             elif estado == 9:
                 if re.search('[0-9]',c):
                     buffer+=c
@@ -258,11 +264,11 @@ class AnalizadorLexico:
                 elif c == '}':
                     self.listaTokens.append(Token(c,'llaveB',linea,columna))
                     columna+=1
-                    estado =1
+                    estado =19
             
             elif estado == 19:
                 if c ==';':
-                    self.listaTokens.append(Token(c,'punto_coma'))
+                    self.listaTokens.append(Token(c,'punto_coma',linea,columna))
                     columna+=1
                     estado =0
                 

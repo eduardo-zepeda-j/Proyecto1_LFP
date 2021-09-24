@@ -93,7 +93,9 @@ def crearMatriz(ruta):
         global titulo,ancho,alto,pixeles,filas,columnas
         inFiltroA = ''
         inFiltroB = ''
+        
         for lexema in matriz:
+            
             global titulo,ancho,alto,pixeles,filas,columnas,filtros
             
             
@@ -116,8 +118,27 @@ def crearMatriz(ruta):
             
             elif lexema.lexema == 'FILTROS':
                 index = matriz.index(lexema)
-                filtros=[ matriz[index+2].lexema.upper(),matriz[index+4].lexema.upper(),matriz[index+6].lexema.upper()]
-
+                filt = []
+                try:
+                    if matriz[index+2]:
+                        filt.append(matriz[index+2].lexema.upper())
+                except:
+                    pass
+                try:
+                    if matriz[index+4]:
+                        filt.append(matriz[index+4].lexema.upper())
+                except:
+                    pass
+                try:
+                    if matriz[index+6]:
+                        filt.append(matriz[index+6].lexema.upper())
+                except:
+                    pass
+                
+                
+                
+                filtros=filt
+                
 
             
             elif lexema.lexema == 'CELDAS':
@@ -140,7 +161,7 @@ def crearMatriz(ruta):
                         pixeles.append(p)
                     
                         
-                    
+        
         newMatriz = Matriz(titulo,ancho,alto,filas,columnas,filtros)
         newMatriz.listaPixeles = sorted(pixeles,key=lambda pix:pix.posicionY)
         pixeles = []
@@ -165,8 +186,7 @@ def crearHTML():
     '''
     
     for i in objetosMatriz:
-        x = 0
-        y = 0
+  
         ancho = int(i.ancho)
         alto = int(i.alto)
         filas = int(i.filas)
@@ -187,11 +207,11 @@ def crearHTML():
         pixelAncho = ancho/columnas
         pixelAlto = alto/filas
         
-        for a in range(columnas):
+        for a in range(filas):
             table+='''<tr>\n'''
-            for b in range(filas):
-                fila = b
-                columna =a
+            for b in range(columnas):
+                fila = a
+                columna =b
                 color = 'white'
                 for p in pixeles:
                     if p.posicionX ==columna and p.posicionY==fila:
@@ -212,63 +232,6 @@ def crearHTML():
     archivo.write(html)
     archivo.close()
     
-def crearHTMLmirrorX():
-    global listaTablas
-    html = '''
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    '''
-    
-    for i in objetosMatriz:
-        x = 0
-        y = 0
-        ancho = int(i.ancho)
-        alto = int(i.alto)
-        filas = int(i.filas)
-        columnas = int(i.columnas)
-        
-        
-        table = f'''<table border = "1" width = "{ancho}px" height = "{alto}px" cellspacing="0">
-        '''
-        
-        pixeles = i.listaPixeles
-        
-        pixelAncho = ancho/columnas
-        pixelAlto = alto/filas
-        
-        for a in (range(columnas)):
-            table+='''<tr>\n'''
-            for b in reversed(range(filas)):
-                fila = b
-                columna =a
-                color = 'white'
-                for p in pixeles:
-                    if p.posicionY ==fila and p.posicionX==columna:
-                        if p.bool =='TRUE':
-                            color = p.color
-                table+=f'''<td id="{columna,fila}" width = "{pixelAlto}px" height="{pixelAncho}px" bgcolor = "{color}"></td>\n'''                         
-            table+='</tr>\n'
-                
-            
-        table+="</table>\n"
-        html +=table
-        listaTablas.append([i.titulo+'mirrorX',table])
-      
-    html +='''</body>
-    </html>'''
-    
-    archivo = open('tablasMirrorX.html','w')
-    archivo.write(html)
-    archivo.close()
-    
 def crearHTMLmirrorY():
     global listaTablas
     html = '''
@@ -285,8 +248,7 @@ def crearHTMLmirrorY():
     '''
     
     for i in objetosMatriz:
-        x = 0
-        y = 0
+       
         ancho = int(i.ancho)
         alto = int(i.alto)
         filas = int(i.filas)
@@ -301,11 +263,11 @@ def crearHTMLmirrorY():
         pixelAncho = ancho/columnas
         pixelAlto = alto/filas
         
-        for a in reversed(range(columnas)):
+        for a in reversed(range(filas)):
             table+='''<tr>\n'''
-            for b in (range(filas)):
-                fila = b
-                columna =a
+            for b in (range(columnas)):
+                fila = a
+                columna =b
                 color = 'white'
                 for p in pixeles:
                     if p.posicionY ==fila and p.posicionX==columna:
@@ -323,6 +285,62 @@ def crearHTMLmirrorY():
     </html>'''
     
     archivo = open('tablasMirrorY.html','w')
+    archivo.write(html)
+    archivo.close()
+    
+def crearHTMLmirrorX():
+    global listaTablas
+    html = '''
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    '''
+    
+    for i in objetosMatriz:
+  
+        ancho = int(i.ancho)
+        alto = int(i.alto)
+        filas = int(i.filas)
+        columnas = int(i.columnas)
+        
+        
+        table = f'''<table border = "1" width = "{ancho}px" height = "{alto}px" cellspacing="0">
+        '''
+        
+        pixeles = i.listaPixeles
+        
+        pixelAncho = ancho/columnas
+        pixelAlto = alto/filas
+        
+        for a in (range(filas)):
+            table+='''<tr>\n'''
+            for b in reversed(range(columnas)):
+                fila = a
+                columna =b
+                color = 'white'
+                for p in pixeles:
+                    if p.posicionY ==fila and p.posicionX==columna:
+                        if p.bool =='TRUE':
+                            color = p.color
+                table+=f'''<td id="{columna,fila}" width = "{pixelAlto}px" height="{pixelAncho}px" bgcolor = "{color}"></td>\n'''                         
+            table+='</tr>\n'
+                
+            
+        table+="</table>\n"
+        html +=table
+        listaTablas.append([i.titulo+'mirrorX',table])
+      
+    html +='''</body>
+    </html>'''
+    
+    archivo = open('tablasMirrorX.html','w')
     archivo.write(html)
     archivo.close()
 def limpiarTablas():
@@ -361,9 +379,9 @@ def crearHTMLdoublemirror():
         pixelAncho = ancho/columnas
         pixelAlto = alto/filas
         
-        for a in reversed(range(columnas)):
+        for a in reversed(range(filas)):
             table+='''<tr>\n'''
-            for b in reversed(range(filas)):
+            for b in reversed(range(columnas)):
                 fila = b
                 columna =a
                 color = 'white'
@@ -405,10 +423,7 @@ def crearGraphviz():
         
 
 
-if __name__ == '__main__':
-    crearMatriz('proyecto1.pxla')
-    crearHTML()
-    crearGraphviz()
+
     
     
     

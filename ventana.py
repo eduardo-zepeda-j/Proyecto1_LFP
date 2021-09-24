@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ventana(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(880, 606)
+        MainWindow.resize(1250, 1006)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -57,7 +57,7 @@ class Ventana(object):
         self.comboBox.setGeometry(QtCore.QRect(200, 70, 661, 41))
         self.comboBox.setObjectName("comboBox")
         self.visor = QtWidgets.QLabel(self.centralwidget)
-        self.visor.setGeometry(QtCore.QRect(200, 130, 651, 381))
+        self.visor.setGeometry(QtCore.QRect(200, 130, 951, 981))
         self.visor.setText("")
         self.visor.setObjectName("visor")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
